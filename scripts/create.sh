@@ -1,0 +1,1 @@
+docker compose -f ./docker/create-site.yml up
