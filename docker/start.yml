@@ -1,12 +1,16 @@
 version: '3'
 services:
   jekyll-server:
-    image: jekyll/jekyll:4.0
+    image: jekyll/jekyll:4.2.2
     container_name: setup-jekyll
     environment:
       MY_ENV_VAR_DUMMY: 'dummy'
     volumes:
       - '../new_site:/srv/jekyll'
     ports:
-      - 4000:4000 # (localhost port) => (docker port)
-    command: 'jekyll serve --incremental'
+      - 9999:4000 # (localhost port) => (docker port)
+    command: "jekyll serve --incremental"
+
+    # gem install bundle
+    # jekyll bundle add webrick
+    # jekyll serve --incremental
