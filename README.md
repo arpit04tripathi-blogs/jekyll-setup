@@ -31,6 +31,7 @@ sh scripts/start.sh
 
 visit localhost:9999
 ```
+[localhost:9999](localhost:9999)
 
 # Dump
 
