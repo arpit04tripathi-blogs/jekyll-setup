@@ -6,7 +6,7 @@ services:
     environment:
       MY_ENV_VAR_DUMMY: 'dummy'
     volumes:
-      - '../new_site:/srv/jekyll'
+      - '../.:/srv/jekyll'
     ports:
       - 9999:4000 # (localhost port) => (docker port)
     command: "jekyll serve --incremental"
