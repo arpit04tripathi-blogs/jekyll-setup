@@ -1,0 +1,14 @@
+# This is equivalent to running below command from root of this project
+# docker run --rm --volume="$PWD:/srv/jekyll" -p 9999:4000 jekyll/jekyll:4.2.2 jekyll serve --incremental
+version: '3'
+services:
+  jekyll-server:
+    image: jekyll/jekyll:4.2.2
+    container_name: setup-jekyll
+    environment:
+      MY_ENV_VAR_DUMMY: 'dummy'
+    volumes:
+      - '../.:/srv/jekyll' # relative path from this folder
+    ports:
+      - 9999:4000 # (localhost port) => (docker port)
+    command: "jekyll serve --incremental"

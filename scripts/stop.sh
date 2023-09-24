@@ -1,0 +1,1 @@
+docker compose -f ./docker/start.yml down
