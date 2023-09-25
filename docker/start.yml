@@ -4,7 +4,7 @@ version: '3'
 services:
   jekyll-server:
     image: jekyll/jekyll:4.2.2
-    container_name: setup-jekyll
+    container_name: jekyll-setup
     environment:
       MY_ENV_VAR_DUMMY: 'dummy'
     volumes:
