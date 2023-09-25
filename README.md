@@ -8,9 +8,11 @@ Recommended way is Docker based installation.
 
 ## Docker based Installation
 
-```
+```bash
+# create using jekyll new command in docker
 sh scripts/create.sh
 move content from new_site to root
+# start the new site using docker
 sh scripts/start.sh
 
 ERROR: 
@@ -30,24 +32,18 @@ Install jekyll for specific OS by following [these](https://jekyllrb.com/docs/in
 chruby ruby-3.2.2
 ```
 
-# Dump
+# Add bootstrap 5
 
-Install and run Jekyll project using docker
 
-Article - https://ddewaele.github.io/running-jekyll-in-docker/ 
-Docker Hub - https://hub.docker.com/r/jekyll/jekyll/ 
 
+# Troubleshooting
+
+## Port already used
+```bash
+# find process_id using the port
+netstat -vanp tcp | grep 9999
+# kill the process based on process_id
+kill -9 <PROCESS_ID>
 ```
-mkdir -p ~/Projects/NewBlog ;
-cd ~/Projects/NewBlog;
-docker run --rm --volume="$PWD:/srv/jekyll" -it jekyll/jekyll jekyll new .
-docker run --rm --volume="$PWD:/srv/jekyll" -it jekyll/jekyll jekyll bundle add webrick
-
-docker run --rm --volume="$PWD:/srv/jekyll" -it jekyll/jekyll jekyll build
-
-docker run --name newblog --volume="$PWD:/srv/jekyll" -p 3000:4000 -it jekyll/jekyll jekyll serve --watch --drafts
-```
-
-Access on local - http://localhost:3000/ 
 
  
