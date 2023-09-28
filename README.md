@@ -19,7 +19,7 @@ ERROR:
 /usr/gem/gems/jekyll-4.2.2/lib/jekyll/commands/serve/servlet.rb:3:in `require': cannot load such file -- webrick (LoadError)
 ```
 
-Add `gem "webrick"` to `_config.yml`
+Add `gem "webrick"` to `Gemfile`
 ```
 sh scripts/start.sh
 ```
