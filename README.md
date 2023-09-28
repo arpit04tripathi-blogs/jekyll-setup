@@ -4,37 +4,20 @@ This project guides to setup the jekyll project.
 
 # Installation
 
-Recommended way is Docker based installation.
+1. Create a new repository
+2. git clone the repo and open in editor (like vs code)
+3. Copy directories - docker and scripts from this repo to new repo in vs code
+4. you should have these installed - docker and chrome browser
+5. Run the command in terminal - `sh scripts/create.sh`
+6. Update `Gemfile` to add `gem "webrick"`
+7. OPTIONAL Step
+   1. Update container name in yml in docker dir
+   2. Update `_config.yml` for `baseurl`
+   3. update `start.sh` for updated url
+8. Run the command in terminal - `sh scripts/start.sh`
+9.  This will open chrome browser or you can visit [localhost:9999](http://localhost:9999)
 
-## Docker based Installation
-
-```bash
-# create using jekyll new command in docker
-sh scripts/create.sh
-move content from new_site to root
-# start the new site using docker
-sh scripts/start.sh
-
-ERROR: 
-/usr/gem/gems/jekyll-4.2.2/lib/jekyll/commands/serve/servlet.rb:3:in `require': cannot load such file -- webrick (LoadError)
-```
-
-Add `gem "webrick"` to `Gemfile`
-```
-sh scripts/start.sh
-```
-visit [localhost:9999](http://localhost:9999)
-
-## Normal Installation
-Install jekyll for specific OS by following [these](https://jekyllrb.com/docs/installation/) steps
-
-```
-chruby ruby-3.2.2
-```
-
-# Add bootstrap 5
-
-
+Official documentation for jekyll is [here](https://jekyllrb.com/)
 
 # Troubleshooting
 
@@ -45,5 +28,3 @@ netstat -vanp tcp | grep 9999
 # kill the process based on process_id
 kill -9 <PROCESS_ID>
 ```
-
- 
