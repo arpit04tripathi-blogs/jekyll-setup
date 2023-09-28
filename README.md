@@ -28,3 +28,11 @@ netstat -vanp tcp | grep 9999
 # kill the process based on process_id
 kill -9 <PROCESS_ID>
 ```
+
+# Useful git commands
+
+```
+git fetch --all -p; git pull; git status;
+git merge origin/main;
+git push;
+```
