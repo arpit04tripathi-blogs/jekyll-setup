@@ -11,4 +11,4 @@ services:
       - '../.:/srv/jekyll' # relative path from this folder
     ports:
       - 9999:4000 # (localhost port) => (docker port)
-    command: "jekyll serve --incremental"
+    command: sh "docker/entry.sh"
