@@ -1,2 +1,4 @@
-echo "command => git fetch --all -p; git pull; git status;"
+echo =========================================================
+echo "git fetch --all -p; git pull; git status;"
+echo =========================================================
 git fetch --all -p; git pull; git status;
