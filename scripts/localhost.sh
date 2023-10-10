@@ -1,7 +1,8 @@
-echo ============================== Running $0 with $# arguments ==============================
+echo =========================================================
+echo Running $0 with $# arguments
 echo [processID] $$
 echo [arguments] $@
-echo
+echo =========================================================
 
 case $1 in
   --new)
@@ -21,3 +22,5 @@ case $1 in
     echo opening chrome $cmd
     ;;
 esac
+
+echo
