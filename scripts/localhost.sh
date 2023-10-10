@@ -13,7 +13,7 @@ case $1 in
     ;;
   --stop)
     echo "running docker compose down"
-    docker compose -f ./docker/docker-compose.yml down server
+    docker compose -f ./docker/docker-compose.yml down
     ;;
   *)
     echo docker compose up
