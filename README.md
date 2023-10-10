@@ -16,7 +16,7 @@ This project guides to setup the jekyll project.
    3. update `start.sh` for updated url
 8. Run the command in terminal - `sh scripts/localhost.sh`
 9. This will open chrome browser or you can visit [localhost:9999](http://localhost:9999)
-10. To stop the local server - `sh scripts/localhost.sh --stop`
+10. To stop the local server, run this command in terminal - `sh scripts/localhost.sh --stop`
 
 Official documentation for jekyll is [here](https://jekyllrb.com/)
 
