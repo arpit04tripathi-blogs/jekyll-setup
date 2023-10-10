@@ -20,7 +20,3 @@ services:
     ports:
       - 4000:4000 # (localhost port) => (docker port)
     command: "jekyll new ./new_site"
-
-networks:
-  common:
-    name: jekyll_local
