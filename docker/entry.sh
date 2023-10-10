@@ -7,7 +7,7 @@ echo =========================================================
 # echo "<=== info minima ===>"
 # bundle info minima
 
-if [[ $1 = '--new' ]]
+if [[ $# -gt 0 ]] && [[ $1 = '--new' ]]
 then
   echo "<=== Creating new Jekyll project ===>"
   jekyll new ./new_site
