@@ -36,3 +36,5 @@ git fetch --all -p; git pull; git status;
 git merge origin/main;
 git push;
 ```
+
+This is based on jekyll-theme [minima](https://github.com/jekyll/minima#contents-at-a-glance)
