@@ -1,26 +1,32 @@
-# setup-jekyll
+# jekyll-setup
 
 This project guides to setup the jekyll project.
 
 # Installation
 
 1. Create a new repository
-2. git clone the repo and open in editor (like vs code)
-3. Copy directories - docker and scripts from this repo to new repo in vs code
-4. you should have these installed - docker and chrome browser
+2. `git clone` the repo and open in editor (like vs code)
+3. Copy directories - `docker` and `scripts` from this repo to new repo in vs code
+4. you should have these installed - `docker` and `chrome browser`
 5. Run the command in terminal - `sh scripts/localhost.sh --new`
-6. Update `Gemfile` to add `gem "webrick"`
-7. OPTIONAL Step
-   1. Update container name in yml in docker dir
-   2. Update `_config.yml` for `baseurl`
-   3. update `start.sh` for updated url
-8. Run the command in terminal - `sh scripts/localhost.sh`
-9. This will open chrome browser or you can visit [localhost:9999](http://localhost:9999)
-10. To stop the local server, run this command in terminal - `sh scripts/localhost.sh --stop`
+6. This creates basic folder structure.
+7. Replace all instances of text `jekyll-setup` with your repo name (ex. `my-repo`), this will change below files
+   1. `docker-compose.yml` - change `container_name: jekyll-setup` to `container_name: my-repo`
+   2. `localhost.sh` - `http://localhost:9999/jekyll-setup/` to `http://localhost:9999/my-repo/`
+8. `Gemfile` - add `gem "webrick"`
+9.  `_config.yml` - update `baseurl` as `/my-repo`
 
-Official documentation for jekyll is [here](https://jekyllrb.com/)
+# Running on local
+
+1. start server - `sh scripts/localhost.sh`
+   1. This will open chrome browser or you can visit [localhost:9999](http://localhost:9999)
+   2. Initially, you will see error page `This site can’t be reached`
+   3. after some time when container has started, you will see the site running
+2. stop server - `sh scripts/localhost.sh --stop`
 
 # Troubleshooting
+
+Official documentation for jekyll is [here](https://jekyllrb.com/)
 
 ## Port already used
 ```bash
